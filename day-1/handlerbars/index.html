@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script id="store-template" type="text/x-handlebars-template">
+        <p>
+          <span> {{ item }} </span> - <span>{{ price }} Shekels </span>
+        </p>
+      </script> -->
+<!-- 
+      <script id="store-template" type="text/x-handlebars-template">
+        <ul>
+            {{#each classmates}}
+                {{#if socialNetwork}}
+                    <li>{{name}}</li>
+                {{/if}}
+            {{/each}}
+          </ul>
+      </script> -->
+
+      <script id="first-template" type="text/x-handlebars-template">   
+        <ul>
+            {{#each animals}}
+                <li>{{ this }}</li>
+            {{/each}}
+            </ul>
+      </script>
+      
+      <script id="second-template" type="text/x-handlebars-template">      
+            <ul>
+                {{#each languages}}
+                    <li>{{ this }}</li>
+                {{/each}}
+            </ul>
+          </script>
+      </script>
+      
+      <p id="special"></p>
+      
+      
+      <div class="items">
+      </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
