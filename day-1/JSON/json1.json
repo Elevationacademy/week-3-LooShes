@@ -31,6 +31,7 @@
       }
     ],
     "directions": [
+      "Cut potatoes into half inch thick slices",
       "Add potatoes to a pot and cover with an inch of water.",
       "Bring the water to a boil over high heat, then reduce to a simmer and cover.",
       "Simmer for 20 minutes or until potatoes are fork tender.",
@@ -38,6 +39,7 @@
       "Add remaining ingredients to the pot with the potatoes.",
       "Mash potatoes until they reach the desired consistency.",
       "Serve immediately, or cover and refrigerate."
-    ]
+    ],
+    "calories": 250,
+    "healthy": true
   }
-  
