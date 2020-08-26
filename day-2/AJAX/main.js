@@ -1,22 +1,3 @@
-// // // Initialize the HTTP request to a server located at "someURL"
-// var xhr = new XMLHttpRequest();
-// xhr.open('get', '/someURL');
-
-// //Track the state changes of the request.
-// xhr.onreadystatechange = function () {
-//     var DONE = 4; // readyState 4 means the request is done.var OK = 200; // status 200 is a successful return.if (xhr.readyState === DONE) {
-//         if (xhr.status === OK) {
-//             console.log(xhr.responseText); // 'This is the returned text.'
-//         } else {
-//             console.log('Error: ' + xhr.status); // An error occurred during the request.
-
-//         }
-//     }
-
-// //Send the request to send-ajax-result.php
-// xhr.send(null);
-
-
 // $.get("https://www.googleapis.com/books/v1/volumes?q=isbn:0439023521", function(result){
 //     //console.log(result)
 // })
@@ -43,19 +24,22 @@ const fetch = function(queryType, queryValue){
         method: "GET",
         url: `https://www.googleapis.com/books/v1/volumes?q=${queryType}:${queryValue}`,
         success: function(result) {
-            for(let item of result.items) {
-                console.log(item.volumeInfo.title)
-                console.log(item.volumeInfo.authors)
-            }
+                
+                result.items.forEach(element => console.log(element.volumeInfo.authors))
+                result.items.forEach(element => console.log(element.volumeInfo.title))
+
+                for(i=0; i<result.items.length; i++){
+                    result.items[i].volumeInfo.industryIdentifiers.forEach(element => console.log(element.type))
+                }
         },
         error: function (xhr, text, error) {
             console.log(text)
         }
 });
-
+}
 fetch("title", "The Wise Man's Fear")
-//  fetch("isbn", 9789814561778)
-//  fetch("title", "How to Win Friends and Influence People in the Digital Age")
+fetch("isbn", 9789814561778)
+fetch("title", "How to Win Friends and Influence People in the Digital Age")
 
  //ex1-2
 // const fetch = function (queryType, queryValue) {
